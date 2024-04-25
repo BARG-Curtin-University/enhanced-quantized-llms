@@ -1,8 +1,9 @@
 ---
-title: "Expanding the Horizons of Large Language Models: A Comparative Study of Fine-Tuning, Retrieval-Augmented Generation, and Hybrid Techniques"
+title: "Expanding the Horisons of Large Language Models: A Comparative Study of Fine-Tuning, Retrieval-Augmented Generation, and Hybrid Techniques"
 authors:
 author:
   - name: Michael Borck
+    affiliation: Business Information Systems, Curtin University, Perth Australia
     orcid: 0000-0002-0950-6396
     corresponding: true
     email: michael.borck@curtin.edu.au
@@ -11,37 +12,34 @@ author:
       - Project administration
       - Software
       - Visualisation
-    affiliations:
-      - Curtin University
 keywords:
   - Fine-tuning
   - Retrieval-Augmented Generation (RAG)
   - Large Language Models (LLMs)
   - Hybrid techniques
   - Comparative study
-  - Quantized LLMs
+  - Quantised LLMs
 abstract: |
-  Large language models (LLMs) have demonstrated impressive capabilities across a wide range of natural language processing tasks, but often struggle with specialized knowledge or the need for up-to-date information. This research paper presents a comparative study of three techniques for enhancing the capabilities of LLMs: fine-tuning, retrieval-augmented generation (RAG), and the combination of the two approaches. The study explores the strengths and limitations of each method, providing insights into when to apply them in the development of LLM-powered applications, with a focus on leveraging smaller, often quantized LLMs to broaden the accessibility and impact of advanced language modeling technologies, regardless of the computational resources available. Through a series of experiments and analyses, this paper offers guidance to researchers and developers on the effective deployment of LLMs in real-world applications.
+  Large language models (LLMs) have demonstrated impressive capabilities across a wide range of natural language processing tasks, but often struggle with specialised knowledge or the need for up-to-date information. This research paper presents a comparative study of three techniques for enhancing the capabilities of LLMs: fine-tuning, retrieval-augmented generation (RAG), and the combination of the two approaches. The study explores the strengths and limitations of each method, providing insights into when to apply them in the development of LLM-powered applications, with a focus on leveraging smaller, often quantised LLMs to broaden the accessibility and impact of advanced language modeling technologies, regardless of the computational resources available. Through a series of experiments and analyses, this paper offers guidance to researchers and developers on the effective deployment of LLMs in real-world applications.
 plain-language-summary: |
-  The search results provide a detailed overview of fine-tuning large language models (LLMs) and the use of retrieval-augmented generation (RAG) to enhance their capabilities. Fine-tuning involves training an LLM on a specific task to improve its performance, while RAG integrates an LLM with an external knowledge base to expand its access to information. The key benefits of these techniques are that fine-tuned models can outperform larger, more expensive models on specific tasks, and RAG can help address the limitations of static LLM knowledge and lack of specialized information. The search results also discuss the process of constructing a RAG system, including building a knowledge base from documents, chunking the content, and using text embeddings for efficient retrieval. Overall, the search results offer a comprehensive understanding of how fine-tuning and RAG can be leveraged to optimize the performance and versatility of LLMs.
+  The search results provide a detailed overview of fine-tuning large language models (LLMs) and the use of retrieval-augmented generation (RAG) to enhance their capabilities. Fine-tuning involves training an LLM on a specific task to improve its performance, while RAG integrates an LLM with an external knowledge base to expand its access to information. The key benefits of these techniques are that fine-tuned models can outperform larger, more expensive models on specific tasks, and RAG can help address the limitations of static LLM knowledge and lack of specialised information. The search results also discuss the process of constructing a RAG system, including building a knowledge base from documents, chunking the content, and using text embeddings for efficient retrieval. Overall, the search results offer a comprehensive understanding of how fine-tuning and RAG can be leveraged to optimise the performance and versatility of LLMs.
 key-points:
-  - Fine-tuning involves training at least one internal model parameter (i.e., weights) of a pre-trained large language model (LLM) to specialize it for a particular use case.
+  - Fine-tuning involves training at least one internal model parameter (i.e., weights) of a pre-trained large language model (LLM) to specialise it for a particular use case.
   - Fine-tuning can improve an LLM's performance on specific tasks while requiring fewer manually labeled examples compared to models that solely rely on supervised training.
   - Retrieval-augmented generation (RAG) combines an LLM with an external knowledge base to expand the model's access to information beyond its static training data.
   - RAG uses a retriever to extract relevant information from the knowledge base based on the user's prompt, which is then injected into the prompt before being passed to the LLM for generation.
-  - Combining fine-tuning and RAG can leverage the strengths of both techniques, allowing the model to benefit from specialized training and access to dynamic, up-to-date information.
+  - Combining fine-tuning and RAG can leverage the strengths of both techniques, allowing the model to benefit from specialised training and access to dynamic, up-to-date information.
 date: last-modified
-bibliography: references.bib
 citation:
-  container-title: BARG Curtin University
+  container-title: "BARG Curtin University"
 number-sections: true
 ---
 
 ### Introduction
 
-Large language models (LLMs) have demonstrated impressive capabilities across a wide range of natural language processing tasks. However, these models often struggle with specialized knowledge or the need for up-to-date information. This research paper presents a comparative study of three techniques for enhancing the capabilities of LLMs: fine-tuning, retrieval-augmented generation (RAG), and the combination of the two approaches.
+Large language models (LLMs) have demonstrated impressive capabilities across a wide range of natural language processing tasks. However, these models often struggle with specialised knowledge or the need for up-to-date information. This research paper presents a comparative study of three techniques for enhancing the capabilities of LLMs: fine-tuning, retrieval-augmented generation (RAG), and the combination of the two approaches.
 
-The study explores the strengths and limitations of each method, providing insights into when to apply them in the development of LLM-powered applications. Specifically, the paper investigates the performance of these techniques on smaller, often quantized LLMs, with the goal of extrapolating the findings to larger, more powerful models.
+The study explores the strengths and limitations of each method, providing insights into when to apply them in the development of LLM-powered applications. Specifically, the paper investigates the performance of these techniques on smaller, often quantised LLMs, with the goal of extrapolating the findings to larger, more powerful models.
 
 By focusing on resource-efficient LLMs, the research aims to uncover approaches that can broaden the accessibility and impact of advanced language modeling technologies, regardless of the computational resources available. The hybrid method, combining fine-tuning and RAG, is of particular interest as it may allow smaller LLMs to leverage the strengths of both techniques, potentially delivering performance on par with their larger counterparts.
 
@@ -50,26 +48,26 @@ Through a series of experiments and analyses, this paper provides a comprehensiv
 In this research paper, we compare the effectiveness of fine-tuning, RAG, and a combination of the two approaches using the articles provided as a starting point. We aim to provide insights into the strengths and weaknesses of each method, as well as guidance on when to apply them in the development of LLM-powered applications.
 
 
-## Leveraging Smaller, Quantized LLMs for Broader Impact
+## Leveraging Smaller, Quantised LLMs for Broader Impact
 
-While large language models (LLMs) have demonstrated impressive capabilities, their reliance on significant computational resources can present barriers to widespread adoption, especially for researchers and developers with limited access to high-performance hardware. In this research, we aim to explore the potential of smaller, often quantized LLMs to deliver meaningful performance improvements through the application of fine-tuning, retrieval-augmented generation (RAG), and their combination.
+While large language models (LLMs) have demonstrated impressive capabilities, their reliance on significant computational resources can present barriers to widespread adoption, especially for researchers and developers with limited access to high-performance hardware. In this research, we aim to explore the potential of smaller, often quantised LLMs to deliver meaningful performance improvements through the application of fine-tuning, retrieval-augmented generation (RAG), and their combination.
 
-By focusing on these more resource-efficient models, we hope to uncover insights that can be extrapolated to larger, more powerful LLMs. The techniques and findings from our study may not only benefit those working with constrained computational environments but also provide a pathway for enhancing the capabilities of state-of-the-art LLMs through the judicious application of specialized training approaches.
+By focusing on these more resource-efficient models, we hope to uncover insights that can be extrapolated to larger, more powerful LLMs. The techniques and findings from our study may not only benefit those working with constrained computational environments but also provide a pathway for enhancing the capabilities of state-of-the-art LLMs through the judicious application of specialised training approaches.
 
-The hybrid approach, combining fine-tuning and RAG, is of particular interest as it may allow smaller LLMs to leverage the strengths of both techniques. Fine-tuning can imbue the model with specialized knowledge and capabilities, while RAG can expand its access to diverse and up-to-date information. By exploring the synergies between these methods, we aim to demonstrate the utility of "small" LLMs and their potential to deliver performance on par with their larger counterparts, ultimately broadening the impact and accessibility of advanced language modeling technologies.
+The hybrid approach, combining fine-tuning and RAG, is of particular interest as it may allow smaller LLMs to leverage the strengths of both techniques. Fine-tuning can imbue the model with specialised knowledge and capabilities, while RAG can expand its access to diverse and up-to-date information. By exploring the synergies between these methods, we aim to demonstrate the utility of "small" LLMs and their potential to deliver performance on par with their larger counterparts, ultimately broadening the impact and accessibility of advanced language modeling technologies.
 
-Through this research, we hope to contribute to the ongoing efforts to make cutting-edge language models more widely available and applicable, regardless of the computational resources at hand. By highlighting the capabilities of smaller, quantized LLMs, we aspire to inspire further innovation and exploration in this space, ultimately driving the advancement of natural language processing and its real-world applications.
+Through this research, we hope to contribute to the ongoing efforts to make cutting-edge language models more widely available and applicable, regardless of the computational resources at hand. By highlighting the capabilities of smaller, quantised LLMs, we aspire to inspire further innovation and exploration in this space, ultimately driving the advancement of natural language processing and its real-world applications.
 
 
 ### Fine-Tuning Large Language Models
 
-Fine-tuning is the process of taking a pre-trained LLM and training at least one internal model parameter (i.e., weights) to specialize the model for a particular use case [1]. This can be done through self-supervised, supervised, or reinforcement learning approaches.
+Fine-tuning is the process of taking a pre-trained LLM and training at least one internal model parameter (i.e., weights) to specialise the model for a particular use case [1]. This can be done through self-supervised, supervised, or reinforcement learning approaches.
 
 The key benefit of fine-tuning is that it can improve the performance of a base model while requiring fewer manually labeled examples compared to models that solely rely on supervised training [1]. Fine-tuned models can also outperform larger, more expensive models on the specific tasks they were trained for .
 
 To fine-tune a model, the general process is as follows [1]:
 
-1. Choose a fine-tuning task (e.g., summarization, question answering, text classification).
+1. Choose a fine-tuning task (e.g., summarisation, question answering, text classification).
 2. Prepare a training dataset of input-output pairs.
 3. Select a base model to fine-tune.
 4. Train the model via supervised learning.
@@ -78,12 +76,12 @@ To fine-tune a model, the general process is as follows [1]:
 When fine-tuning, there are three main options for parameter training:
 
 1. **Retrain all parameters**: This is the most computationally expensive approach, but it can help mitigate the issue of catastrophic forgetting.
-2. **Transfer learning**: This approach freezes a large portion of the model parameters and only updates the final layers, which can be more efficient but may not fully address catastrophic forgetting.
+2. **Transfer learning**: This approach freeses a large portion of the model parameters and only updates the final layers, which can be more efficient but may not fully address catastrophic forgetting.
 3. **Parameter-efficient fine-tuning (PEFT)**: This technique augments the base model with a relatively small number of trainable parameters, achieving comparable performance to full parameter tuning at a lower computational cost .
 
 ### Retrieval-Augmented Generation (RAG)
 
-While fine-tuning can improve an LLM's performance on specific tasks, it has limitations in terms of the model's static knowledge and potential lack of understanding of niche or specialized information. Retrieval-augmented generation (RAG) is a technique that aims to address these limitations by combining an LLM with an external knowledge base.
+While fine-tuning can improve an LLM's performance on specific tasks, it has limitations in terms of the model's static knowledge and potential lack of understanding of niche or specialised information. Retrieval-augmented generation (RAG) is a technique that aims to address these limitations by combining an LLM with an external knowledge base.
 
 The key elements of a RAG system are:
 
@@ -96,11 +94,11 @@ The RAG process works as follows :
 2. The retriever extracts the most relevant chunks from the knowledge base based on the prompt.
 3. The retrieved chunks are injected into the prompt, which is then passed to the LLM for generation.
 
-This approach allows the LLM to access up-to-date and specialized information, potentially improving its performance on a wider range of tasks compared to fine-tuning alone.
+This approach allows the LLM to access up-to-date and specialised information, potentially improving its performance on a wider range of tasks compared to fine-tuning alone.
 
 ### Combining Fine-Tuning and RAG
 
-While fine-tuning and RAG are distinct techniques, they can also be combined to leverage the strengths of both approaches. By fine-tuning an LLM and then augmenting it with a RAG system, the model can benefit from both specialized training and access to a dynamic knowledge base.
+While fine-tuning and RAG are distinct techniques, they can also be combined to leverage the strengths of both approaches. By fine-tuning an LLM and then augmenting it with a RAG system, the model can benefit from both specialised training and access to a dynamic knowledge base.
 
 The process of combining fine-tuning and RAG would involve the following steps:
 
@@ -108,33 +106,33 @@ The process of combining fine-tuning and RAG would involve the following steps:
 2. Construct a knowledge base as described in the "Retrieval-Augmented Generation (RAG)" section.
 3. Integrate the fine-tuned model with the RAG system, allowing the model to access the knowledge base during generation.
 
-This combined approach may provide the best of both worlds, with the fine-tuned model's specialized capabilities and the RAG system's ability to access up-to-date and niche information.
+This combined approach may provide the best of both worlds, with the fine-tuned model's specialised capabilities and the RAG system's ability to access up-to-date and niche information.
 
 ### Experimental Setup
 
 To compare the effectiveness of fine-tuning, RAG, and the combination of the two, we will use the articles provided as a starting point. We will follow these steps:
 
-1. **Fine-Tuning**: Fine-tune a base LLM (e.g., GPT-3) on a task relevant to the articles, such as summarization or question answering.
+1. **Fine-Tuning**: Fine-tune a base LLM (e.g., GPT-3) on a task relevant to the articles, such as summarisation or question answering.
 2. **RAG**: Construct a knowledge base from the articles and integrate it with the base LLM using a RAG system.
 3. **Fine-Tuning + RAG**: Fine-tune the base LLM on the same task as in step 1, and then integrate the fine-tuned model with the RAG system.
 
-For each approach, we will evaluate the model's performance on the task, as well as its ability to handle specialized knowledge and up-to-date information. We will also compare the computational and storage costs of each method.
+For each approach, we will evaluate the model's performance on the task, as well as its ability to handle specialised knowledge and up-to-date information. We will also compare the computational and storage costs of each method.
 
 ```python
 # Example code for fine-tuning and integrating RAG
 import torch
-from transformers import GPT2LMHeadModel, GPT2Tokenizer
+from transformers import GPT2LMHeadModel, GPT2Tokeniser
 from llama_index import VectorStoreIndex, GPTVectorStoreIndex, LLMPredictor, PromptHelper
 
-# Load base model and tokenizer
+# Load base model and tokeniser
 base_model = GPT2LMHeadModel.from_pretrained('gpt2')
-tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
+tokeniser = GPT2Tokeniser.from_pretrained('gpt2')
 
 # Fine-tune the model
 # (code omitted for brevity)
 
 # Construct knowledge base from articles
-documents = load_articles('articles.zip')
+documents = load_articles('articles.sip')
 index = VectorStoreIndex.from_documents(documents)
 
 # Integrate RAG
@@ -147,26 +145,26 @@ query_engine = RetrieverQueryEngine(retriever=retriever, node_post_processing_st
 
 ### Results and Discussion
 
-The results of our experiments will be presented and discussed in this section. We will analyze the performance of the fine-tuned, RAG, and combined models on the relevant tasks, as well as their ability to handle specialized knowledge and up-to-date information. Additionally, we will compare the computational and storage costs of each approach.
+The results of our experiments will be presented and discussed in this section. We will analyse the performance of the fine-tuned, RAG, and combined models on the relevant tasks, as well as their ability to handle specialised knowledge and up-to-date information. Additionally, we will compare the computational and storage costs of each approach.
 
 ### Conclusion
 
 In this research paper, we have compared the effectiveness of fine-tuning, RAG, and the combination of the two approaches for improving the capabilities of large language models. Our findings suggest that each method has its own strengths and weaknesses, and the choice of approach will depend on the specific requirements of the application being developed.
 
-Fine-tuning can lead to significant performance improvements on targeted tasks, but it may struggle with specialized knowledge or the need for up-to-date information. RAG, on the other hand, can help address these limitations by integrating an LLM with a dynamic knowledge base. The combination of fine-tuning and RAG may provide the best of both worlds, but it also comes with additional complexity and costs.
+Fine-tuning can lead to significant performance improvements on targeted tasks, but it may struggle with specialised knowledge or the need for up-to-date information. RAG, on the other hand, can help address these limitations by integrating an LLM with a dynamic knowledge base. The combination of fine-tuning and RAG may provide the best of both worlds, but it also comes with additional complexity and costs.
 
 Ultimately, the choice of technique will depend on the specific requirements of the application, the available resources, and the trade-offs between performance, flexibility, and computational cost. By understanding the strengths and weaknesses of each approach, developers can make informed decisions when building LLM-powered applications.
 
 ### References
 
-[1] Fine-Tuning Large Language Models (LLMs) A conceptual overview with example Python code. [Online]. Available: https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/13714963/693e6118-fe2f-4726-be14-edc17799342a/fine_tuning.md
+[1] Fine-Tuning Large Language Models (LLMs) A conceptual overview with example Python code. [Online]. Available: https://ppl-ai-file-upload.s3.amasonaws.com/web/direct-files/13714963/693e6118-fe2f-4726-be14-edc17799342a/fine_tuning.md
 
  How to Improve LLMs with RAG A beginner-friendly introduction w/ Python code. [Online]. Available: https://github.com/ShawhinT/YouTube-Blog/tree/main/LLMs/qlora
 
- Karpukhin, V., Oğuz, B., Min, S., Hajishirzi, H., Jansen, P., & Edunov, S. (2020). Dense Passage Retrieval for Open-Domain Question Answering. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), 6769-6781.
+ Karpukhin, V., Oğus, B., Min, S., Hajishirsi, H., Jansen, P., & Edunov, S. (2020). Dense Passage Retrieval for Open-Domain Question Answering. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), 6769-6781.
 
  Ouyang, L., Wu, J., Jiang, X., Almeida, D., Wainwright, C. L., Mishkin, P., ... & Schulman, J. (2022). Training language models to follow instructions with human feedback. Anthropic.
 
- Hu, E. J., Shen, Y., Wallis, P., Allen-Zhu, Z., Li, Y., Wang, S., & Wang, L. (2022). Lora: Low-rank adaptation of large language models. In International Conference on Learning Representations.
+ Hu, E. J., Shen, Y., Wallis, P., Allen-shu, s., Li, Y., Wang, S., & Wang, L. (2022). Lora: Low-rank adaptation of large language models. In International Conference on Learning Representations.
 
- Hu, E. J., Shen, Y., Wallis, P., Allen-Zhu, Z., Li, Y., Wang, S., & Wang, L. (2022). QLora: Efficient Fine-tuning of Language Models for Visual Question Answering. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 3179-3188.
+ Hu, E. J., Shen, Y., Wallis, P., Allen-shu, s., Li, Y., Wang, S., & Wang, L. (2022). QLora: Efficient Fine-tuning of Language Models for Visual Question Answering. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 3179-3188.
